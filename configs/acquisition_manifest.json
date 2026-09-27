@@ -1,0 +1,51 @@
+{
+  "source": {
+    "dataset": "University of Manitoba Breast Microwave Imaging Dataset (UM-BMID)",
+    "doi": "10.21227/1Y0Z-8T98",
+    "documentation": ["docs/equipment.md", "docs/scan_geometry.md", "docs/metadata_info.md"],
+    "note": "Geometry and VNA settings below are taken from the UM-BMID documentation, not extracted from scanner headers. Input hashes identify local clean-file copies; an immutable upstream preprocessing release was not identified.",
+    "download_revision": null,
+    "examined_source_archive_sha256": "76d6499457d11b3027c142f318865a4f4969986888ca476d07b9b6653a6805ca",
+    "examined_make_clean_files_py_sha256": "189155ba0d17c5c35dad62109066f4eb4cc28357776ad02f07da6d3fa5a77499"
+  },
+  "acquisition": {
+    "vna": "Copper Mountain Technologies Planar 804/1",
+    "antenna_model": "A-INFO LB-20200-SF double-ridged horn",
+    "frequency_hz": {"start": 1000000000, "stop": 8000000000, "count": 1001, "spacing": "linear"},
+    "scan_angles_deg": {"first": 0, "last": 355, "count": 72, "step": 5, "rotation": "clockwise"},
+    "gen1": {"ports": ["S11"], "first_antenna_start_polar_deg": -102.5},
+    "gen2": {"ports": ["S11", "S21"], "first_antenna_start_polar_deg": -130, "second_antenna_start_polar_deg": -70, "second_port_offset_deg": 60},
+    "if_bandwidth_hz": 10000,
+    "output_power_dbm": 10
+  },
+  "calibration": {
+    "input_suffix": "_emp",
+    "operation": "complex empty-chamber reference subtraction in the frequency domain using each measurement's emp_ref_id",
+    "additional_envelope_subtraction": false,
+    "local_build_source_sha256": "899001c6aaf8427a990ff1ea2de7fe8ca6ed14d4dcbdb71ebd966d2bfa1bb96c",
+    "note": "The reported cross-generation run did not rotate Gen1 and Gen2 scans to a common physical antenna origin. Its AUC cannot isolate a specific hardware mechanism."
+  },
+  "local_clean_input_sha256": {
+    "gen1_fd_data_s11_emp.pickle": "08e159698e4ec7e7bb41c0339c6714b02020818486fec4c8e93414d3614da273",
+    "gen1_md_list_s11_emp.pickle": "7908732642c0b11fd10069611bcc00b1ccc53203056e499367a9f315b8c45e55",
+    "gen2_fd_data_s11_emp.pickle": "0251ac7137ea08b27a1487346471c958f90a30956b8cba429b835114610ccf11",
+    "gen2_md_list_s11_emp.pickle": "6855555516e5fa8943fc3f8a382c285893d836abe3dde57aa0e54650c4ad0fd7",
+    "gen2_fd_data_s21_emp.pickle": "aa79e835f2a387e63a14cbf1ad43c0a8f84aa8e68d613033cd2054b5d7ea4944",
+    "gen2_md_list_s21_emp.pickle": "6855555516e5fa8943fc3f8a382c285893d836abe3dde57aa0e54650c4ad0fd7"
+  },
+  "clean_input_files": [
+    {"generation": "gen1", "port": "S11", "kind": "signal", "filename": "fd_data_s11_emp.pickle", "size_bytes": null, "sha256": "08e159698e4ec7e7bb41c0339c6714b02020818486fec4c8e93414d3614da273", "revision": "unrecorded; historical local copy not present for size recheck"},
+    {"generation": "gen1", "port": "S11", "kind": "metadata", "filename": "md_list_s11_emp.pickle", "size_bytes": null, "sha256": "7908732642c0b11fd10069611bcc00b1ccc53203056e499367a9f315b8c45e55", "revision": "unrecorded; historical local copy not present for size recheck"},
+    {"generation": "gen2", "port": "S11", "kind": "signal", "filename": "fd_data_s11_emp.pickle", "size_bytes": 230630541, "sha256": "0251ac7137ea08b27a1487346471c958f90a30956b8cba429b835114610ccf11", "revision": "IEEE DataPort download revision unrecorded"},
+    {"generation": "gen2", "port": "S11", "kind": "metadata", "filename": "md_list_s11_emp.pickle", "size_bytes": 319534, "sha256": "6855555516e5fa8943fc3f8a382c285893d836abe3dde57aa0e54650c4ad0fd7", "revision": "IEEE DataPort download revision unrecorded"},
+    {"generation": "gen2", "port": "S21", "kind": "signal", "filename": "fd_data_s21_emp.pickle", "size_bytes": 230630541, "sha256": "aa79e835f2a387e63a14cbf1ad43c0a8f84aa8e68d613033cd2054b5d7ea4944", "revision": "IEEE DataPort download revision unrecorded"},
+    {"generation": "gen2", "port": "S21", "kind": "metadata", "filename": "md_list_s21_emp.pickle", "size_bytes": 319534, "sha256": "6855555516e5fa8943fc3f8a382c285893d836abe3dde57aa0e54650c4ad0fd7", "revision": "IEEE DataPort download revision unrecorded"}
+  ],
+  "cross_generation_harmonization": {
+    "reported_frequency_hz": [1000000000, 8000000000],
+    "reported_angle_grid_deg": {"start": 0, "step": 5, "count": 72},
+    "physical_gen1_gen2_antenna_origin_difference_deg": 27.5,
+    "physical_origin_rotation_applied_in_reported_run": false
+  },
+  "existing_gen2_aligned_npz_sha256": "1b6d44c4a6f647534a7f543b622db83d73ed6e021ebdd938951289682957995b"
+}

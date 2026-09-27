@@ -1,0 +1,4 @@
+﻿Analysis,ROC AUC,Sensitivity,Specificity,Balanced accuracy
+Original model,0.925,1.000,0.350,0.675
+Late-time gate (bins 40–74),0.595,0.500,0.500,0.500
+Angular-order shuffle,0.500,0.650,0.250,0.450

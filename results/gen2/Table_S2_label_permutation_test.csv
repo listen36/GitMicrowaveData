@@ -1,0 +1,2 @@
+﻿Test,Observed AUC,Mean null AUC,Δ AUC,Permutations,One-sided p
+Within-phantom label permutation,0.925,0.506,0.419,200,0.0050

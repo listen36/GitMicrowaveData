@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated manuscript and the UM-BMID dataset."
+title: "UM-BMID Phantom-Disjoint Validation"
+type: software
+authors:
+  - family-names: Fang
+    given-names: Lisen
+version: 1.0.0
+license: Apache-2.0
+keywords:
+  - microwave imaging
+  - phantom-disjoint validation
+  - UM-BMID
+references:
+  - type: dataset
+    title: "University of Manitoba Breast Microwave Imaging Dataset (UM-BMID)"
+    doi: 10.21227/1Y0Z-8T98
+

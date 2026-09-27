@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary
+*.npy binary
+
+# Preserve curated artifacts exactly for CHECKSUMS.sha256.
+results/** -text

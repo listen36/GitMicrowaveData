@@ -1,0 +1,62 @@
+{
+  "port": "S11 (the only S-parameter acquired in Gen1)",
+  "harmonization": "common frequency band plus circular Fourier angular resampling; per-sample envelope normalization in feature extraction",
+  "Gen1_to_Gen2": {
+    "source_n": 249,
+    "source_groups": 13,
+    "target_n": 200,
+    "target_groups": 20,
+    "source_group_oof_auc": 0.7685806451612903,
+    "C": 0.1,
+    "source_oof_threshold": 0.3483483483483483,
+    "common_frequency_hz": [
+      1000000000.0,
+      8000000000.0,
+      1001
+    ],
+    "common_angles": 72,
+    "target_metrics": {
+      "threshold": 0.3483483483483483,
+      "roc_auc": 0.5047,
+      "accuracy": 0.46,
+      "balanced_accuracy": 0.46,
+      "sensitivity": 0.68,
+      "specificity": 0.24,
+      "precision": 0.4722222222222222,
+      "f1": 0.5573770491803278,
+      "tn": 24,
+      "fp": 76,
+      "fn": 32,
+      "tp": 68
+    }
+  },
+  "Gen2_to_Gen1": {
+    "source_n": 200,
+    "source_groups": 20,
+    "target_n": 249,
+    "target_groups": 13,
+    "source_group_oof_auc": 0.7113,
+    "C": 1.0,
+    "source_oof_threshold": 0.8868868868868869,
+    "common_frequency_hz": [
+      1000000000.0,
+      8000000000.0,
+      1001
+    ],
+    "common_angles": 72,
+    "target_metrics": {
+      "threshold": 0.8868868868868869,
+      "roc_auc": 0.41774193548387095,
+      "accuracy": 0.43775100401606426,
+      "balanced_accuracy": 0.4384516129032258,
+      "sensitivity": 0.6129032258064516,
+      "specificity": 0.264,
+      "precision": 0.4523809523809524,
+      "f1": 0.5205479452054794,
+      "tn": 33,
+      "fp": 92,
+      "fn": 48,
+      "tp": 76
+    }
+  }
+}

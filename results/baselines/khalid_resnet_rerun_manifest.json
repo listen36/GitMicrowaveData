@@ -1,0 +1,39 @@
+{
+  "status": "completed GPU retraining",
+  "date": "2026-09-27",
+  "reported_table": "Table IV",
+  "run_count": 20,
+  "selection_rule": "maximum validation ROC AUC rounded to 12 decimal places; retain first prespecified seed/configuration on ties; never use test scores for selection",
+  "command_parameters": {"seed": 20260910, "seeds": 5, "epochs": 300, "patience": 40},
+  "runtime": {
+    "operating_system": "Ubuntu 22.04.1 LTS",
+    "python": "3.10.8",
+    "numpy": "1.26.4",
+    "scikit_learn": "1.7.2",
+    "scipy": "1.15.3",
+    "torch": "2.1.2+cu118",
+    "gpu": "NVIDIA GeForce RTX 3080 Ti",
+    "nvidia_driver": "595.71.05"
+  },
+  "sha256": {
+    "training_script": "f59a4cb5f7d4c152b894afa9e60c762c273488a8ffd819c9f9ed17a71408fed0",
+    "gen2_aligned_npz": "1b6d44c4a6f647534a7f543b622db83d73ed6e021ebdd938951289682957995b",
+    "fixed_group_split_npz": "c1d46b6bab9aa453339f3c5a2b07542b66486c85a02bf6421d01223ea565e78a",
+    "result_json": "404e08e8db5332bfc91b617cb15839754b7b56e8ae9ef50466d82c89e0a99df3"
+  },
+  "selected": {
+    "seed": 20260910,
+    "base_channels": 16,
+    "dropout": 0.5,
+    "learning_rate": 0.0001,
+    "validation_auc": 0.93,
+    "test_auc": 0.7575,
+    "test_sensitivity": 0.75,
+    "test_specificity": 0.25,
+    "test_balanced_accuracy": 0.5,
+    "test_f1": 0.6,
+    "test_confusion": {"tn": 5, "fp": 15, "fn": 5, "tp": 15}
+  },
+  "all_run_test_auc": {"mean": 0.61375, "population_std": 0.0655481693108206, "min": 0.5175, "max": 0.7575},
+  "comparison_with_prior_archive": "Earlier 20-run archive selected test AUC 0.8025. Different GPU runs are not bitwise identical; revised Table IV uses this completed rerun and retains the earlier file only as an audit record."
+}

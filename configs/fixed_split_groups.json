@@ -1,0 +1,10 @@
+{
+  "description": "Manuscript fixed split. Groups are physical phantom IDs and are mutually exclusive across partitions.",
+  "train": [
+    "A14F12", "A14F2", "A14F3", "A16F1", "A16F11", "A16F14", "A16F2",
+    "A16F3", "A2F11", "A2F12", "A2F2", "A2F3", "A3F11", "A3F2"
+  ],
+  "val": ["A2F1", "A3F3"],
+  "test": ["A14F1", "A14F11", "A3F1", "A3F12"]
+}
+

@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+umbmid-env/
+*.egg-info/
+build/
+dist/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Raw/processed datasets are obtained separately from IEEE DataPort
+data/raw/
+data/processed/
+*.pickle
+*.pkl
+*.npz
+*.npy
+
+# Runtime output and logs (curated outputs under results/ are tracked)
+outputs/
+*.log
+
+!results/**/*.json
+!results/**/*.csv
+!results/**/*.png
+!results/**/*.pdf
+!results/**/*.svg
+!results/**/*.npy
+
+
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+credentials.json
+service-account*.json
+
+# Local verification environments and tooling caches
+verify-venv/
+release-verify-venv/
+.mypy_cache/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+
+# Model checkpoints, temporary files, and release archives
+*.pt
+*.pth
+*.ckpt
+*.tmp
+*.bak
+*.zip
